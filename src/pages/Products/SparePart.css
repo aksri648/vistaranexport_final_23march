@@ -1,0 +1,28 @@
+.sparepart-page {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+/* reuse same styles as Rice.css or define similar */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.page-header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+.page-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
