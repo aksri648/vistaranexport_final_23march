@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import MapEmbed from '../MapEmbed/MapEmbed';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ const Contact = () => {
             <div className="info-card">
               <div className="info-icon">📍</div>
               <h3>Address</h3>
-              <p>Business Bay, Dubai, UAE</p>
+              <p>209 Austria Business Centre, Al hudaiba mall, Dubai</p>
             </div>
             <div className="info-card">
               <div className="info-icon">📞</div>
@@ -173,8 +174,13 @@ const Contact = () => {
               </form>
             )}
           </div>
+          <br />
+          
         </div>
       </section>
+      <div className="map-container">
+              <MapEmbed />
+            </div>
     </div>
   );
 };

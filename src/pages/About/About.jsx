@@ -1,18 +1,18 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './About.css';
-import uaeflag from '../../../public/images/uaeflag.png';
-import indiaflag from '../../../public/images/indiaflag.png';
-import southafricaflag from '../../../public/images/southafricaflag.png';
-import globeicon from '../../../public/images/globeicon.png';
-import personicon from '../../../public/images/personicon.png';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./About.css";
+import uaeflag from "../../../public/images/uaeflag.png";
+import indiaflag from "../../../public/images/indiaflag.png";
+import southafricaflag from "../../../public/images/southafricaflag.png";
+import globeicon from "../../../public/images/globeicon.png";
+import personicon from "../../../public/images/personicon.png";
 
-import customersupport_icon from '../../../public/images/customersupport_icon.png';
-import assurityicon from '../../../public/images/assurityicon.png';
-import clipboardicon from '../../../public/images/clipboardicon.png';
-import handshakeicon from '../../../public/images/handshakeicon.png';
-import about from '../../assets/about.jpeg';
-
+import MapEmbed from "../MapEmbed/MapEmbed";
+import customersupport_icon from "../../../public/images/customersupport_icon.png";
+import assurityicon from "../../../public/images/assurityicon.png";
+import clipboardicon from "../../../public/images/clipboardicon.png";
+import handshakeicon from "../../../public/images/handshakeicon.png";
+import about from "../../assets/about.jpeg";
 
 const About = () => {
   const navigate = useNavigate();
@@ -20,53 +20,96 @@ const About = () => {
   // Services data
   const services = [
     {
-      icon: '🌍',
-      title: 'General Trading',
-      description: 'We supply a wide variety of goods across sectors including Construction Materials, Food & Beverages, Electrical and Mechanical Supplies, Consumer Products, Household & Industrial Items.'
+      icon: "🌍",
+      title: "General Trading",
+      description:
+        "We supply a wide variety of goods across sectors including Construction Materials, Food & Beverages, Electrical and Mechanical Supplies, Consumer Products, Household & Industrial Items.",
     },
     {
-      icon: '🚢',
-      title: 'Import & Export',
-      description: 'From product sourcing to customs clearance, we manage the full supply chain across borders: Global Sourcing, Export Documentation, Import Handling, Freight & Logistics Coordination.'
+      icon: "🚢",
+      title: "Import & Export",
+      description:
+        "From product sourcing to customs clearance, we manage the full supply chain across borders: Global Sourcing, Export Documentation, Import Handling, Freight & Logistics Coordination.",
     },
     {
-      icon: '🛒',
-      title: 'Custom Procurement',
-      description: 'Tell us what you need—we’ll find it for you. Through our global supplier base, we provide custom sourcing and delivery of specific products tailored to your business requirements.'
-    }
+      icon: "🛒",
+      title: "Custom Procurement",
+      description:
+        "Tell us what you need—we’ll find it for you. Through our global supplier base, we provide custom sourcing and delivery of specific products tailored to your business requirements.",
+    },
   ];
 
   // Industries data
   const industries = [
-    'Retail & Wholesale',
-    'Hospitality & Tourism',
-    'Construction & Real Estate',
-    'Food Distribution',
-    'Manufacturing & Industrial',
-    'Government and Institutional Buyers'
+    "Retail & Wholesale",
+    "Hospitality & Tourism",
+    "Construction & Real Estate",
+    "Food Distribution",
+    "Manufacturing & Industrial",
+    "Government and Institutional Buyers",
   ];
 
   // Why Choose Us data
   const whyChooseUs = [
-      { icon: globeicon, title: "UAE-Based Global Hub", description: "Leverage our extensive global network to connect your business seamlessly across continents." },
-      { icon: personicon, title: "Strong Sourcing Network", description: "We handle special shipments with expert care and customized logistics solutions." },
-      { icon: handshakeicon, title: "Competitive Pricing", description: "Count on us for on-time deliveries that keep your operations running smoothly." },
-      { icon: clipboardicon, title: "Timely Deliveries", description: "Our tailored solutions fit your unique business needs, ensuring maximum efficiency." },
-      { icon: personicon, title: "Professional Trade Support", description: "Experience round-the-clock support for any queries or logistics assistance." },
-      { icon: assurityicon, title: "End-to-End Service", description: "Join hundreds of satisfied clients who trust our reputable and esteemed company." }
-    ];
-  
+    {
+      icon: globeicon,
+      title: "UAE-Based Global Hub",
+      description:
+        "Leverage our extensive global network to connect your business seamlessly across continents.",
+    },
+    {
+      icon: personicon,
+      title: "Strong Sourcing Network",
+      description:
+        "We handle special shipments with expert care and customized logistics solutions.",
+    },
+    {
+      icon: handshakeicon,
+      title: "Competitive Pricing",
+      description:
+        "Count on us for on-time deliveries that keep your operations running smoothly.",
+    },
+    {
+      icon: clipboardicon,
+      title: "Timely Deliveries",
+      description:
+        "Our tailored solutions fit your unique business needs, ensuring maximum efficiency.",
+    },
+    {
+      icon: personicon,
+      title: "Professional Trade Support",
+      description:
+        "Experience round-the-clock support for any queries or logistics assistance.",
+    },
+    {
+      icon: assurityicon,
+      title: "End-to-End Service",
+      description:
+        "Join hundreds of satisfied clients who trust our reputable and esteemed company.",
+    },
+  ];
+
   // Team data
   const team = [
-    { name: 'Ambikesh Tripathi', position: 'CEO - Founder', phone: '+971 56 911 9955', image: '/images/men1.png' },
-    { name: 'Spandana M', position: 'Operational Head', phone: '+70 264 566 579', image: '/images/lady.png' }
+    {
+      name: "Ambikesh Tripathi",
+      position: "CEO - Founder",
+      phone: "+971 56 911 9955",
+      image: "/images/men1.png",
+    },
+    {
+      name: "Spandana M",
+      position: "Operational Head",
+      phone: "+70 264 566 579",
+      image: "/images/lady.png",
+    },
   ];
 
   // Locations
   const locations = [
-    { name: 'U.A.E', flag: uaeflag },
-    { name: 'INDIA', flag: indiaflag },
-    { name: 'AFRICA', flag: southafricaflag }
+    { name: "U.A.E", flag: uaeflag },
+    { name: "INDIA", flag: indiaflag },
+    { name: "AFRICA", flag: southafricaflag },
   ];
 
   return (
@@ -91,16 +134,27 @@ const About = () => {
             <div className="who-we-are-content">
               <h2 className="section-title-left">Who We Are</h2>
               <p className="who-we-are-text">
-                <strong>Vistaran Exports</strong> is a trusted name in general trading and international trade, connecting buyers and suppliers across continents. Headquartered in the UAE, we offer reliable sourcing, timely delivery, and comprehensive logistics support. Our experienced team ensures your business gets what it needs—when and where it needs it.
+                <strong>Vistaran Exports</strong> is a trusted name in general
+                trading and international trade, connecting buyers and suppliers
+                across continents. Headquartered in the UAE, we offer reliable
+                sourcing, timely delivery, and comprehensive logistics support.
+                Our experienced team ensures your business gets what it
+                needs—when and where it needs it.
               </p>
               <div className="mission-vision">
                 <div className="mission">
                   <h3>🎯 Our Mission</h3>
-                  <p>To simplify global trade by offering efficient, ethical, and affordable trading solutions.</p>
+                  <p>
+                    To simplify global trade by offering efficient, ethical, and
+                    affordable trading solutions.
+                  </p>
                 </div>
                 <div className="vision">
                   <h3>🌟 Our Vision</h3>
-                  <p>To be the preferred trade partner for businesses worldwide, known for integrity, reliability, and service excellence.</p>
+                  <p>
+                    To be the preferred trade partner for businesses worldwide,
+                    known for integrity, reliability, and service excellence.
+                  </p>
                 </div>
               </div>
             </div>
@@ -113,7 +167,9 @@ const About = () => {
         <div className="container">
           <div className="section-header-center">
             <h2 className="section-title-center">Our Services</h2>
-            <p className="section-subtitle">Comprehensive trading solutions tailored to your needs</p>
+            <p className="section-subtitle">
+              Comprehensive trading solutions tailored to your needs
+            </p>
           </div>
           <div className="services-grid">
             {services.map((service, index) => (
@@ -132,7 +188,9 @@ const About = () => {
         <div className="container">
           <div className="section-header-center">
             <h2 className="section-title-center">Industries We Serve</h2>
-            <p className="section-subtitle">Serving diverse sectors with excellence</p>
+            <p className="section-subtitle">
+              Serving diverse sectors with excellence
+            </p>
           </div>
           <div className="industries-grid">
             {industries.map((industry, index) => (
@@ -154,7 +212,9 @@ const About = () => {
           <div className="why-choose-grid">
             {whyChooseUs.map((item, index) => (
               <div key={index} className="why-choose-card">
-                <div className="why-choose-icon"><img src={item.icon}/></div>
+                <div className="why-choose-icon">
+                  <img src={item.icon} />
+                </div>
                 <h3 className="why-choose-title">{item.title}</h3>
                 <p className="why-choose-description">{item.description}</p>
               </div>
@@ -168,13 +228,19 @@ const About = () => {
         <div className="container">
           <div className="section-header-center">
             <h2 className="section-title-center">Our Team</h2>
-            <p className="section-subtitle">Meet the experts behind our success</p>
+            <p className="section-subtitle">
+              Meet the experts behind our success
+            </p>
           </div>
           <div className="team-grid">
             {team.map((member, index) => (
               <div key={index} className="team-card">
                 <div className="team-card-image">
-                  <img src={member.image} alt={member.name} className="team-card-img" />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="team-card-img"
+                  />
                 </div>
                 <div className="team-card-content">
                   <h3 className="team-card-name">{member.name}</h3>
@@ -197,7 +263,9 @@ const About = () => {
           <div className="locations-grid">
             {locations.map((location, index) => (
               <div key={index} className="location-card">
-                <div className="location-flag"><img src={location.flag}/></div>
+                <div className="location-flag">
+                  <img src={location.flag} />
+                </div>
                 <h3 className="location-name">{location.name}</h3>
               </div>
             ))}
@@ -208,13 +276,34 @@ const About = () => {
       {/* Contact Info Box */}
       <section className="contact-info-section">
         <div className="container">
-          <div className="contact-info-box">
-            <h3>Get in Touch</h3>
-            <p><strong>📍 Address:</strong> Business Bay, Dubai, UAE</p>
-            <p><strong>📞 Phone:</strong> +971 56 911 9955</p>
-            <p><strong>📧 Email:</strong> info@vistaranexports.com</p>
-            <p><strong>🌐 Web:</strong> www.vistaranexports.com</p>
-            <button className="btn btn-primary" onClick={() => navigate('/contact')}>Contact Us</button>
+          <div className="contact-info-wrapper">
+            {/* Left column: contact details */}
+            <div className="contact-info-box">
+              <h3>Get in Touch</h3>
+              <p>
+                <strong>📍 Address:</strong> 209 Austria Business Centre, Al
+                hudaiba mall, Dubai
+              </p>
+              <p>
+                <strong>📞 Phone:</strong> +971 56 911 9955
+              </p>
+              <p>
+                <strong>📧 Email:</strong> info@vistaranexports.com
+              </p>
+              <p>
+                <strong>🌐 Web:</strong> www.vistaranexports.com
+              </p>
+              <button
+                className="btn btn-primary"
+                onClick={() => navigate("/contact")}
+              >
+                Contact Us
+              </button>
+            </div>
+            {/* Right column: map */}
+            <div className="map-container">
+              <MapEmbed />
+            </div>
           </div>
         </div>
       </section>

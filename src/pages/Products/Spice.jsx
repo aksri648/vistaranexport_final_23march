@@ -63,7 +63,9 @@ const Spice = () => {
       <div className="container">
         <div className="page-header">
           <h1>Spices</h1>
-          <p>Authentic Indian Spices</p>
+          <p>Spices are flavorful, aromatic parts of various plants—such as seeds, roots, bark, fruits, or flowers—used primarily to season, color, and preserve foods.
+
+Spices are derived from many parts of plants: seeds (cumin, coriander), bark (cinnamon), roots/rhizomes (ginger, turmeric), flowers (clove, saffron), fruits and berries (pepper, cardamom, chili), and even stigmas (saffron).</p>
         </div>
 
         <div

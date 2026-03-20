@@ -62,7 +62,7 @@ const slides = [
       id: 1,
       name: "Rice",
       description: "Premium Basmati & More",
-      image: "/images/rice.png"
+      image: "/images/ricecats.jpeg"
     },
     {
       id: 2,
@@ -285,7 +285,7 @@ const slides = [
         <div className="container">
           <div className="who-we-are-grid">
             <div className="who-we-are-image">
-              <img src="/images/sidebar.png" alt="Who We Are" className="who-we-are-img" />
+              <img src="/images/export.jpeg" alt="Who We Are" className="who-we-are-img" />
             </div>
             <div className="who-we-are-content">
               <h2 className="who-we-are-title">Who We Are</h2>
