@@ -66,8 +66,8 @@ const Pulses = () => {
     <div className="pulses-page">
       <div className="container">
         <div className="page-header">
-          <h1>Pulses</h1>
-          <p>Protein-Rich Legumes</p>
+          <h1 style={{color:'white'}}>Pulses</h1>
+          <p style={{color:'white'}}>Protein-Rich Legumes</p>
         </div>
         <div className="products-grid">
           {products.map(product => (

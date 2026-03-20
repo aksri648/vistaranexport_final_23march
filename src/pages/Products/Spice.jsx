@@ -66,8 +66,8 @@ const Spice = () => {
     <div className="spice-page">
       <div className="container">
         <div className="page-header">
-          <h1>Spices</h1>
-          <p>Authentic Indian Spices</p>
+          <h1 style={{color:'white'}}>Spices</h1>
+          <p style={{color:'white'}}>Authentic Indian Spices</p>
         </div>
         <div className="products-grid">
           {products.map(product => (

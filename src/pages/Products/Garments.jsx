@@ -55,8 +55,8 @@ const Garments = () => {
     <div className="garments-page">
       <div className="container">
         <div className="page-header">
-          <h1>Garments</h1>
-          <p>Textile & Apparel</p>
+          <h1 style={{color:'white'}}>Garments</h1>
+          <p style={{color:'white'}}>Textile & Apparel</p>
         </div>
         <div className="products-grid">
           {products.map(product => (

@@ -90,18 +90,6 @@ const slides = [
       name: "Industrial-Chemicals",
       description: "Bulk Chemicals",
       image: "/images/chemicalcat.jpeg"
-    },
-    {
-      id: 7,
-      name: "Industrial-Chemicals",
-      description: "Industrial Equipment",
-      image: "/images/electrical.avif"
-    },
-    {
-      id: 8,
-      name: "Industrial-Chemicals",
-      description: "Building Supplies",
-      image: "/images/consmaterial.png"
     }
   ];
 
@@ -121,10 +109,8 @@ const slides = [
     { id: 2, name: "Saeed Bin Mohammed", title: "Client", quote: "Fast, secure, and efficient service from Vistaran Exports. Their 24/7 support helped me resolve queries quickly.", rating: "Good Services" },
     { id: 3, name: "Layla Al Mazrouei", title: "Client", quote: "Highly recommended for bespoke logistics solutions. Vistaran Exports understands our business and tailors services perfectly.", rating: "Great Work" },
     { id: 4, name: "Ahmad Al Farsi", title: "Client", quote: "Vistaran Exports delivers consistently on time with excellent customer service, making my shipping experience hassle-free and reliable.", rating: "On Time Delivery" },
-    { id: 5, name: "Fatima Al Nuaimi", title: "Client", quote: "The team handled my special shipment with great care and professionalism. I trust them for all my import and export needs.", rating: "Fastest Response" },
-    { id: 6, name: "Saeed Bin Mohammed", title: "Client", quote: "Fast, secure, and efficient service from Vistaran Exports. Their 24/7 support helped me resolve queries quickly.", rating: "Good Services" },
-    { id: 7, name: "Layla Al Mazrouei", title: "Client", quote: "Highly recommended for bespoke logistics solutions. Vistaran Exports understands our business and tailors services perfectly.", rating: "Great Work" },
-    { id: 8, name: "Ahmad Al Farsi", title: "Client", quote: "Vistaran Exports delivers consistently on time with excellent customer service, making my shipping experience hassle-free and reliable.", rating: "On Time Delivery" },
+    { id: 2, name: "Saeed Bin Mohammed", title: "Client", quote: "Fast, secure, and efficient service from Vistaran Exports. Their 24/7 support helped me resolve queries quickly.", rating: "Good Services" }
+    
   ];
 
 
@@ -314,7 +300,7 @@ const slides = [
           <div className="categories-carousel-header">
             <div>
               <h2 className="categories-carousel-title">Product Categories</h2>
-              <span className="categories-carousel-count">{productCategories.length} items</span>
+              
             </div>
             <div className="categories-carousel-arrows">
               <button className="categories-carousel-arrow prev" onClick={prevCategorySlide}>‹</button>

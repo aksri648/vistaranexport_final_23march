@@ -55,8 +55,8 @@ const SparePart = () => {
     <div className="sparepart-page">
       <div className="container">
         <div className="page-header">
-          <h1>Spare Part</h1>
-          <p>Industrial Components</p>
+          <h1 style={{color:'white'}}>Spare Part</h1>
+          <p style={{color:'white'}}>Industrial Components</p>
         </div>
         <div className="products-grid">
           {products.map(product => (

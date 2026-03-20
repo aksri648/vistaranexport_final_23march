@@ -11,6 +11,7 @@ import IndustrialChemicals from './pages/Products/IndustrialChemicals';
 import Pulses from './pages/Products/Pulses';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
+import CallButton from './components/CallButton/CallButton';
 
 import './App.css';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
@@ -35,6 +36,7 @@ function App() {
       </main>
       <Footer />
       <WhatsAppButton/>
+      <CallButton/>
     </div>
   );
 }

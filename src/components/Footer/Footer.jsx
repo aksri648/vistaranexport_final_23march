@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  FaFacebook, 
-  FaTwitter, 
-  FaInstagram, 
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
   FaLinkedin,
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
   FaGlobe,
-  FaCheckCircle
-} from 'react-icons/fa';
-import './Footer.css';
+  FaCheckCircle,
+} from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -37,12 +37,24 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Why Choose Us</h3>
             <ul className="why-choose-list">
-              <li><FaCheckCircle className="check-icon" /> UAE-Based Global Hub</li>
-              <li><FaCheckCircle className="check-icon" /> Strong Sourcing Network</li>
-              <li><FaCheckCircle className="check-icon" /> Competitive Pricing</li>
-              <li><FaCheckCircle className="check-icon" /> Timely Deliveries</li>
-              <li><FaCheckCircle className="check-icon" /> Professional Support</li>
-              <li><FaCheckCircle className="check-icon" /> End-to-End Service</li>
+              <li>
+                <FaCheckCircle className="check-icon" /> UAE-Based Global Hub
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Strong Sourcing Network
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Competitive Pricing
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Timely Deliveries
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> Professional Support
+              </li>
+              <li>
+                <FaCheckCircle className="check-icon" /> End-to-End Service
+              </li>
             </ul>
           </div>
 
@@ -61,11 +73,21 @@ const Footer = () => {
               </li>
               <li>
                 <FaEnvelope className="contact-icon" />
-                <span>Info@vistaranexports.com</span>
+                <a
+                  href="mailto:info@vistaranexports.com"
+                  className="contact-icon" style={{textDecoration:'none',color:'white'}}
+                >
+                  Info@vistaranexports.com
+                </a>
               </li>
+
               <li>
                 <FaGlobe className="contact-icon" />
-                <span>www.vistaranexports.com</span>
+                <a
+                  href="www.vistaranexports.com"
+                  className="contact-icon" style={{textDecoration:'none',color:'white'}}
+                >www.vistaranexports.com</a>
+               
               </li>
             </ul>
           </div>
@@ -73,26 +95,52 @@ const Footer = () => {
 
         {/* CTA Section */}
         <div className="footer-cta">
-          <p className="cta-text">Have a product in mind? Explore opportunities with us</p>
+          <p className="cta-text">
+            Have a product in mind? Explore opportunities with us
+          </p>
           <div className="cta-buttons">
-            <button className="cta-btn contact-btn" onClick={() => window.location.href='/contact'}>Contact Form</button>
-            
+            <button
+              className="cta-btn contact-btn"
+              onClick={() => (window.location.href = "/contact")}
+            >
+              Contact Form
+            </button>
           </div>
         </div>
 
         {/* Social Links */}
         <div className="social-section">
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
               <FaFacebook />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
               <FaTwitter />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <FaLinkedin />
             </a>
           </div>
@@ -101,11 +149,11 @@ const Footer = () => {
         {/* Copyright */}
         <div className="copyright">
           <p>&copy; {currentYear} Vistaran Exports. All rights reserved.</p>
-          <div className="legal-links">
+          {/* <div className="legal-links">
             <Link to="/privacy">Privacy</Link>
             <Link to="/terms">Terms</Link>
             <Link to="/shipping">Shipping</Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

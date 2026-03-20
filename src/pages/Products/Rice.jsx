@@ -66,8 +66,8 @@ const Rice = () => {
     <div className="rice-page">
       <div className="container">
         <div className="page-header">
-          <h1>Rice</h1>
-          <p>Premium Basmati & More</p>
+          <h1 style={{color:'white'}}>Rice</h1>
+          <p style={{color:'white'}}>Premium Basmati & More</p>
         </div>
         <div className="products-grid">
           {products.map(product => (

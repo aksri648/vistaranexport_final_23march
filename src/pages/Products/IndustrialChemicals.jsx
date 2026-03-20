@@ -55,8 +55,8 @@ const IndustrialChemicals = () => {
     <div className="industrialchemicals-page">
       <div className="container">
         <div className="page-header">
-          <h1>Industrial Chemicals</h1>
-          <p>Bulk Chemicals</p>
+          <h1 style={{color:'white'}}>Industrial Chemicals</h1>
+          <p style={{color:'white'}}>Bulk Chemicals</p>
         </div>
         <div className="products-grid">
           {products.map(product => (
