@@ -1,17 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./About.css";
-import uaeflag from "../../../public/images/uaeflag.png";
-import indiaflag from "../../../public/images/indiaflag.png";
-import southafricaflag from "../../../public/images/southafricaflag.png";
-import globeicon from "../../../public/images/globeicon.png";
-import personicon from "../../../public/images/personicon.png";
+import uaeflag from "/images/uaeflag.png";
+import indiaflag from "/images/indiaflag.png";
+import southafricaflag from "/images/southafricaflag.png";
+import globeicon from "/images/globeicon.png";
+import personicon from "/images/personicon.png";
 
 import MapEmbed from "../MapEmbed/MapEmbed";
-import customersupport_icon from "../../../public/images/customersupport_icon.png";
-import assurityicon from "../../../public/images/assurityicon.png";
-import clipboardicon from "../../../public/images/clipboardicon.png";
-import handshakeicon from "../../../public/images/handshakeicon.png";
+import customersupport_icon from "/images/customersupport_icon.png";
+import assurityicon from "/images/assurityicon.png";
+import clipboardicon from "/images/clipboardicon.png";
+import handshakeicon from "/images/handshakeicon.png";
 import about from "../../assets/about.jpeg";
 
 const About = () => {
