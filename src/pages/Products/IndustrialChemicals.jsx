@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './IndustrialChemicals.css';
 import chemical1 from '../../assets/chemical1.jpeg';
 import chemical2 from '../../assets/chemical2.jpeg';
@@ -44,22 +44,32 @@ const IndustrialChemicals = () => {
   const totalRealSlides = originalSlides.length;
   const totalExtendedSlides = extendedSlides.length;
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (!isTransitioning) return;
-    setCurrentIndex((prev) => prev + 1);
-  };
+    setCurrentIndex((prev) => {
+      if (prev >= totalExtendedSlides - 1) {
+        return prev;
+      }
+      return prev + 1;
+    });
+  }, [isTransitioning, totalExtendedSlides]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     if (!isTransitioning) return;
-    setCurrentIndex((prev) => prev - 1);
-  };
+    setCurrentIndex((prev) => {
+      if (prev <= 0) {
+        return prev;
+      }
+      return prev - 1;
+    });
+  }, [isTransitioning]);
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
   };
 
   // Handle transition end to reset index when at clones
-  const handleTransitionEnd = () => {
+  const handleTransitionEnd = useCallback(() => {
     if (currentIndex === 0) {
       // Moved to fake last slide -> jump to last real slide
       setIsTransitioning(false);
@@ -71,7 +81,7 @@ const IndustrialChemicals = () => {
       setCurrentIndex(1);
       setTimeout(() => setIsTransitioning(true), 20);
     }
-  };
+  }, [currentIndex, totalExtendedSlides, totalRealSlides]);
 
   // Auto‑play
   useEffect(() => {
@@ -89,11 +99,11 @@ const IndustrialChemicals = () => {
   // Set up transition detection
   useEffect(() => {
     const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.addEventListener('transitionend', handleTransitionEnd);
-      return () => carousel.removeEventListener('transitionend', handleTransitionEnd);
-    }
-  }, [currentIndex]);
+    if (!carousel) return undefined;
+
+    carousel.addEventListener('transitionend', handleTransitionEnd);
+    return () => carousel.removeEventListener('transitionend', handleTransitionEnd);
+  }, [handleTransitionEnd]);
 
   // Get active dot index
   const getActiveDotIndex = () => {
